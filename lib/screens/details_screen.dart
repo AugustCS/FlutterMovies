@@ -7,11 +7,13 @@ class DetailsScreen extends StatelessWidget {
     final String movie =
         ModalRoute.of(context)?.settings.arguments.toString() ?? 'no-movie';
 
-    return CustomScrollView(
-      slivers: [
-        _CustomAppBar(),
-        SliverList(delegate: SliverChildListDelegate([_PosterAndTitle()]))
-      ],
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: [
+          _CustomAppBar(),
+          SliverList(delegate: SliverChildListDelegate([_PosterAndTitle()]))
+        ],
+      ),
     );
   }
 }
